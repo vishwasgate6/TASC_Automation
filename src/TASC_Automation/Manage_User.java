@@ -42,7 +42,7 @@ public class Manage_User {
 		Thread.sleep(3000);
 	}
 
-	/* @Test (priority = 0)
+	 @Test (priority = 0)
 	public void Addnewuser() throws InterruptedException {
 	
 		WebElement ClickAddNewUser = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnAddNewUser")));
@@ -107,7 +107,7 @@ public class Manage_User {
 		String Alertmessage = GetText.getText();
 		Assert.assertEquals(Alertmessage, "User created successfully!");
 		System.out.println(Alertmessage);
-	}*/
+	}
 
 	
 	@Test (priority = 1)

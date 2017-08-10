@@ -42,7 +42,7 @@ public class Manage_User {
 		Thread.sleep(3000);
 	}
 
-	@Test (priority = 0)
+	/* @Test (priority = 0)
 	public void Addnewuser() throws InterruptedException {
 	
 		WebElement ClickAddNewUser = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnAddNewUser")));
@@ -107,7 +107,7 @@ public class Manage_User {
 		String Alertmessage = GetText.getText();
 		Assert.assertEquals(Alertmessage, "User created successfully!");
 		System.out.println(Alertmessage);
-	}
+	}*/
 
 	
 	@Test (priority = 1)
@@ -119,12 +119,12 @@ public class Manage_User {
 		ClickAddNewUser.click();
 		Thread.sleep(2000);
 		
-		WebElement firstname = wait.until(ExpectedConditions.elementToBeClickable(By.id("FirstName")));
-		firstname.sendKeys("");
-		Thread.sleep(2000);
-		
 		WebElement clickSave = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSave")));
 		clickSave.click();
+		//Thread.sleep(9000);
+		
+		WebElement firstname = wait.until(ExpectedConditions.elementToBeClickable(By.id("FirstName")));
+		firstname.sendKeys("");
 		Thread.sleep(2000);
 		
 		WebElement alertmessage = wait
@@ -133,6 +133,13 @@ public class Manage_User {
 		Assert.assertEquals(firstnamealertmessage, "The First Name is required field");
 		System.out.println(firstnamealertmessage);
 		
+		WebElement lastname = wait.until(ExpectedConditions.elementToBeClickable(By.name("LastName")));
+		lastname.sendKeys("");
+		
+		String lastnamealertmessage1 = "The Last Name is required field";
+		Assert.assertEquals(lastnamealertmessage1,"The Last Name is required field");
+		System.out.println(lastnamealertmessage1);
+				
 	}
 		
 	

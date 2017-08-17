@@ -195,7 +195,7 @@ public class Manage_User {
 	public void closeBrowser() throws InterruptedException {
 
 		
-		//driver.close();
+		driver.close();
 	}
 
 }

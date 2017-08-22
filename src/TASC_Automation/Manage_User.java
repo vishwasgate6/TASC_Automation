@@ -93,7 +93,7 @@ public class Manage_User {
 			if (searchroles.getText().equals(searchrole)) {
 				searchroles.click();
 				// click the desired option
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 
 			}
 

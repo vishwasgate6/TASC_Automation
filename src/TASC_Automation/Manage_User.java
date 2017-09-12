@@ -226,13 +226,6 @@ public class Manage_User {
 		Thread.sleep(2000);			
 		
 	}
-	@Test(priority = 4)
-	public void deleteuser_existingdonors() {
-		
-		
-		
-	}
-	
 
 	@AfterClass
 	public void closeBrowser() throws InterruptedException {

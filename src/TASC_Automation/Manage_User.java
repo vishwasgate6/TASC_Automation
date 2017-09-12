@@ -2,8 +2,12 @@ package TASC_Automation;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import static org.testng.Assert.assertEquals;
+
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByLinkText;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -160,17 +164,21 @@ public class Manage_User {
 
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 2)
 	public void Edituser() throws InterruptedException {
 		
-		
+				
 		WebElement filtertextbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
-		filtertextbox.sendKeys("vishwas9011@gmail.com");
+		filtertextbox.sendKeys("test@gate634.com");
 		filtertextbox.sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
+		
+		String actualTitle = driver.findElement(By.id("UserViewTitle")).getText();
+		String expectedTitle = "EDIT USER > USER, TEST";
+		assertEquals(actualTitle, expectedTitle);
 
-		String Emailcheck = "vishwas9011@gmail.com";
-		Assert.assertEquals(Emailcheck, "vishwas9011@gmail.com");
+		String Emailcheck = "test@gate634.com";
+		Assert.assertEquals(Emailcheck, "test@gate634.com");
 		System.out.println(Emailcheck);
 
 		WebElement edituserclick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='mCSB_2_container']/div[1]/table/tbody/tr/td[2]/a")));
@@ -190,11 +198,45 @@ public class Manage_User {
 		Assert.assertEquals(Success, "User updated successfully!");
 		System.out.println(Success);
 	}
+	
+	@Test(priority = 3)
+	public void emailalreadyexist() throws InterruptedException {
+		
+		WebElement filtertextbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
+		filtertextbox.sendKeys("test@test456.com");
+		filtertextbox.sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
+		
+		WebElement edituserclick = wait.until(ExpectedConditions.elementToBeClickable(By.className("grid-link")));
+		edituserclick.click();
+		Thread.sleep(2000);
+		
+		//Edit Email_id
+		WebElement emailedit = wait.until(ExpectedConditions.elementToBeClickable(By.id("Email")));
+		emailedit.clear();
+		emailedit.sendKeys("vishwas9011@gmail.com");
+		
+		WebElement clickSave = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSave")));
+		clickSave.click();
+		Thread.sleep(2000);
+		
+		String alertmessage = "Email already Exist.";
+		Assert.assertEquals(alertmessage, "Email already Exist.");
+		System.out.println(alertmessage);
+		Thread.sleep(2000);			
+		
+	}
+	@Test(priority = 4)
+	public void deleteuser_existingdonors() {
+		
+		
+		
+	}
+	
 
 	@AfterClass
 	public void closeBrowser() throws InterruptedException {
 
-		
 		driver.close();
 	}
 

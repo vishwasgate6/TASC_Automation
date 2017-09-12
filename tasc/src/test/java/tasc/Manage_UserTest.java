@@ -1,4 +1,6 @@
-package TASC_Automation;
+package tasc;
+
+
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -17,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Manage_User {
+public class Manage_UserTest {
 
 	String s = System.setProperty("webdriver.gecko.driver", "E:\\Seleniume\\geckodriver.exe");
 	WebDriver driver = new FirefoxDriver();

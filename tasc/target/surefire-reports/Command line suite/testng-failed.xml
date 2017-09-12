@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)" preserve-order="false">
+    <classes>
+      <class name="tasc.LoginLogoutTest">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="Open_browser"/>
+          <include name="verifybuilddateandcopyrightmessage"/>
+        </methods>
+      </class>
+      <class name="tasc.Manage_UserTest">
+        <methods>
+          <include name="Edituser"/>
+          <include name="closeBrowser"/>
+          <include name="OpenBrowseAndLogin"/>
+          <include name="emailalreadyexist"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

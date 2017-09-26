@@ -264,7 +264,7 @@ public class Manage_UserTest {
 		}
 
 		WebElement clickuser = driver
-				.findElement(By.xpath("//*[@id='mCSB_3_container']/div[1]/table/tbody/tr[2]/td[2]/a"));
+				.findElement(By.xpath("//*[@id='mCSB_2_container']/div[1]/table/tbody/tr/td[2]/a"));
 		clickuser.click();
 		Thread.sleep(2000);
 
@@ -280,8 +280,82 @@ public class Manage_UserTest {
 		WebElement btncancel = driver.findElement(By.xpath("//*[@id='btnClosePopup']"));
 		btncancel.click();
 		Thread.sleep(2000);
+		
+		WebElement deletebutton = driver.findElement(By.id("btnDelete"));
+		deletebutton.click();
+		Thread.sleep(2000);
+		
+		WebElement confirmbuttonclick = driver.findElement(By.xpath("//*[@id='btnConfirm']"));
+		confirmbuttonclick.click();
+		Thread.sleep(2000);
+		
+		String Success = "User deleted successfully!";
+		Assert.assertEquals(Success, "User deleted successfully!");
+		System.out.println(Success);
+
 	}
 
+	@Test(priority = 5)
+	public void deleteuserwithtdonor() throws InterruptedException {
+		
+		WebElement selectagency = driver.findElement((By.className("k-select")));
+		selectagency.click();
+		Thread.sleep(2000);
+		
+		String searchText = "YUMA COUNTY ADULT PROBATION";
+		List<WebElement> options = driver.findElements(By.xpath("//ul[@id='AgencyFilter_listbox']/li"));
+
+		// Loop through the options and select the one that matches
+		for (WebElement option : options) {
+			if (option.getText().equals(searchText)) {
+				option.click();
+				// click the desired option
+				Thread.sleep(3000);
+			}
+
+		}
+		WebElement Role = driver.findElement((By.xpath(
+				"//*[@id='body']/section/div/div[1]/div[1]/div/div/div/div[2]/div/div[2]/div/span/span/span[2]/span")));
+		Role.click();
+		Thread.sleep(2000);
+
+		// select the Roles from drop-down
+		String searchrole = "CASE MANAGER";
+		List<WebElement> roles = driver.findElements(By.xpath("//ul[@id='RoleFilter_listbox']/li"));
+		// Loop through the options and select the one that matches
+		for (WebElement searchroles : roles) {
+			if (searchroles.getText().equals(searchrole)) {
+				searchroles.click();
+				// click the desired option
+				Thread.sleep(3000);
+			}
+		}
+		
+		WebElement status = driver.findElement((By.xpath(
+				"//*[@id='body']/section/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/div/span/span/span[2]/span")));
+		status.click();
+		Thread.sleep(2000);
+
+		// select the Roles from drop-down
+		String statusfilter1 = "Active";
+		List<WebElement> filterstatus = driver.findElements(By.xpath("//ul[@id='StatusFilter_listbox']/li"));
+	
+		// Loop through the options and select the one that matches
+		for (WebElement status1 : filterstatus) {
+			if (status1.getText().toLowerCase().equals(statusfilter1.toLowerCase())) {
+				status1.click();
+				// click the desired option
+				Thread.sleep(2000);
+			}
+		}
+		
+		WebElement filtertextbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
+		filtertextbox.sendKeys("vishwas9011@gmail.com");
+		filtertextbox.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+
+	}
+		
 	@AfterClass
 	public void closeBrowser() throws InterruptedException {
 

@@ -6,9 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
-
 import static org.testng.Assert.assertEquals;
-
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -273,7 +271,7 @@ public class Manage_UserTest {
 		}
 
 		WebElement filtertextbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
-		filtertextbox.sendKeys("test@gate634.com");
+		filtertextbox.sendKeys("hello2@gate6.com");
 		filtertextbox.sendKeys(Keys.ENTER);
 		((JavascriptExecutor)driver).executeScript("scroll(0,400)");
 		Thread.sleep(2000);
@@ -382,6 +380,12 @@ public class Manage_UserTest {
 		driver.findElement(By.xpath(".//*[@id='btnOk']")).click(); // for clicking the alert pop-up
 		Thread.sleep(2000);
 
+	}
+	
+	@Test(priority = 5)
+	public void ActionDropdownSection() {
+		
+		
 	}
 
 	@AfterClass

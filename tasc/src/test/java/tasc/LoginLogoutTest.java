@@ -3,6 +3,7 @@ package tasc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,9 +14,14 @@ import org.testng.annotations.Test;
 
 public class LoginLogoutTest {
 
-	String s = System.setProperty("webdriver.gecko.driver", "E:\\Seleniume\\geckodriver.exe");
-	WebDriver driver = new FirefoxDriver();
+//	String s = System.setProperty("webdriver.gecko.driver", "E:\\Seleniume\\geckodriver.exe");
+//	WebDriver driver = new FirefoxDriver();
+	//-------------------FireFox-----------------
+	
+String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
 	public WebDriverWait wait = new WebDriverWait(driver, 60);
+	//--------------ChromeDr4iver--------------------------
 
 	@BeforeTest
 	public void Open_browser() throws InterruptedException {

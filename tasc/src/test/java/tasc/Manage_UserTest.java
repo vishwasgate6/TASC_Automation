@@ -382,11 +382,6 @@ public class Manage_UserTest {
 
 	}
 	
-	@Test(priority = 5)
-	public void ActionDropdownSection() {
-		
-		
-	}
 
 	@AfterClass
 	public void closeBrowser() throws InterruptedException {

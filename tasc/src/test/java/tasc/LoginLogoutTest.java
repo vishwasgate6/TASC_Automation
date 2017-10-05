@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class LoginLogoutTest {
 
-	String s = System.setProperty("webdriver.gecko.driver", "E:\\Seleniume\\geckodriver.exe");
+	String s = System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 	WebDriver driver = new FirefoxDriver();
 	public WebDriverWait wait = new WebDriverWait(driver, 60);
 

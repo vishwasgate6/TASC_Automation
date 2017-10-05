@@ -31,27 +31,27 @@ String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver.manage().window().maximize();
 	}
 
-	@BeforeTest
-	public void verifybuilddateandcopyrightmessage() throws InterruptedException {
-
-		WebElement builddate = wait.until(ExpectedConditions.elementToBeClickable(By.className("build-number")));
-		String st = builddate.getText();
-
-		Assert.assertEquals(st, "3.13.07172017 - Firefox 55 (55.0) 1920 x 1080");
-		// Assert.assertEquals(st, "3.11.05102017 - Firefox 54 (54.0) 1920 x
-		// 1080");
-		Thread.sleep(2000);
-		System.out.println(st);
-
-		WebElement copyright = wait.until(ExpectedConditions.elementToBeClickable(By.className("copyright")));
-		String copyrightmessage = copyright.getText();
-		Assert.assertEquals(copyrightmessage, "Copyright 2017. TASC, A private, non-profit, 501 © (3) corporation.");
-		// Assert.assertEquals(copyrightmessage,"Copyright 2017. TASC, A
-		// private, non-profit, 501(c)(3) corporation.");
-
-		Thread.sleep(2000);
-		System.out.println(copyrightmessage);
-	}
+//	@BeforeTest
+//	public void verifybuilddateandcopyrightmessage() throws InterruptedException {
+//
+//		WebElement builddate = wait.until(ExpectedConditions.elementToBeClickable(By.className("build-number")));
+//		String st = builddate.getText();
+//
+//		Assert.assertEquals(st, "3.13.07172017 - Firefox 55 (55.0) 1920 x 1080");
+//		// Assert.assertEquals(st, "3.11.05102017 - Firefox 54 (54.0) 1920 x
+//		// 1080");
+//		Thread.sleep(2000);
+//		System.out.println(st);
+//
+//		WebElement copyright = wait.until(ExpectedConditions.elementToBeClickable(By.className("copyright")));
+//		String copyrightmessage = copyright.getText();
+//		Assert.assertEquals(copyrightmessage, "Copyright 2017. TASC, A private, non-profit, 501 © (3) corporation.");
+//		// Assert.assertEquals(copyrightmessage,"Copyright 2017. TASC, A
+//		// private, non-profit, 501(c)(3) corporation.");
+//
+//		Thread.sleep(2000);
+//		System.out.println(copyrightmessage);
+//	}
 
 	@Test(priority = 0)
 	public void loginlogout() throws InterruptedException {

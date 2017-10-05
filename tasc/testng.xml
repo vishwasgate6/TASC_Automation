@@ -5,6 +5,6 @@
     <classes>
       <class name="tasc.LoginLogoutTest"/>
       <class name="tasc.Manage_UserTest"/>
-    </classes>
+      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,7 +1,5 @@
 package tasc;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +13,7 @@ import org.testng.annotations.Test;
 
 public class LoginLogoutTest {
 
-	String s = System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+	String s = System.setProperty("webdriver.gecko.driver", "E:\\Seleniume\\geckodriver.exe");
 	WebDriver driver = new FirefoxDriver();
 	public WebDriverWait wait = new WebDriverWait(driver, 60);
 
@@ -229,7 +227,7 @@ public class LoginLogoutTest {
 		System.out.println("Reset password window successfully appeared");
 
 		WebElement UserName = wait.until(ExpectedConditions.elementToBeClickable(By.className("k-textbox")));
-		UserName.sendKeys("vishwas9011@gmail.com");
+		UserName.sendKeys("vishwas.iitm09@gmail.com");
 		Thread.sleep(2000);
 
 		WebElement recoverpassword = wait

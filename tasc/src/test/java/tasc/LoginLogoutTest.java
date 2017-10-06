@@ -37,7 +37,7 @@ public class LoginLogoutTest {
 		WebElement builddate = wait.until(ExpectedConditions.elementToBeClickable(By.className("build-number")));
 		String st = builddate.getText();
 
-		Assert.assertEquals(st, "3.13.07172017 - Firefox 56 (56.0) 1920 x 1080");
+		Assert.assertEquals(st, "3.13.07172017 - Chrome 61 (61.0.3163.100) 1920 x 1080");
 		// Assert.assertEquals(st, "3.11.05102017 - Firefox 54 (54.0) 1920 x
 		// 1080");
 		Thread.sleep(2000);

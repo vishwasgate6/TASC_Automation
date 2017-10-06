@@ -18,7 +18,7 @@ public class LoginLogoutTest {
 //	WebDriver driver = new FirefoxDriver();
 	//-------------------FireFox-----------------
 	
-String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
 	public WebDriverWait wait = new WebDriverWait(driver, 60);
 	//--------------ChromeDr4iver--------------------------
@@ -31,29 +31,29 @@ String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver.manage().window().maximize();
 	}
 
-//	@BeforeTest
-//	public void verifybuilddateandcopyrightmessage() throws InterruptedException {
-//
-//		WebElement builddate = wait.until(ExpectedConditions.elementToBeClickable(By.className("build-number")));
-//		String st = builddate.getText();
-//
-//		Assert.assertEquals(st, "3.13.07172017 - Firefox 55 (55.0) 1920 x 1080");
-//		// Assert.assertEquals(st, "3.11.05102017 - Firefox 54 (54.0) 1920 x
-//		// 1080");
-//		Thread.sleep(2000);
-//		System.out.println(st);
-//
-//		WebElement copyright = wait.until(ExpectedConditions.elementToBeClickable(By.className("copyright")));
-//		String copyrightmessage = copyright.getText();
-//		Assert.assertEquals(copyrightmessage, "Copyright 2017. TASC, A private, non-profit, 501 © (3) corporation.");
-//		// Assert.assertEquals(copyrightmessage,"Copyright 2017. TASC, A
-//		// private, non-profit, 501(c)(3) corporation.");
-//
-//		Thread.sleep(2000);
-//		System.out.println(copyrightmessage);
-//	}
+	@Test(priority = 1)
+	public void verifybuilddateandcopyrightmessage() throws InterruptedException {
 
-	@Test(priority = 0)
+		WebElement builddate = wait.until(ExpectedConditions.elementToBeClickable(By.className("build-number")));
+		String st = builddate.getText();
+
+		Assert.assertEquals(st, "3.13.07172017 - Firefox 56 (56.0) 1920 x 1080");
+		// Assert.assertEquals(st, "3.11.05102017 - Firefox 54 (54.0) 1920 x
+		// 1080");
+		Thread.sleep(2000);
+		System.out.println(st);
+
+		WebElement copyright = wait.until(ExpectedConditions.elementToBeClickable(By.className("copyright")));
+		String copyrightmessage = copyright.getText();
+		Assert.assertEquals(copyrightmessage, "Copyright 2017. TASC, A private, non-profit, 501 © (3) corporation.");
+		// Assert.assertEquals(copyrightmessage,"Copyright 2017. TASC, A
+		// private, non-profit, 501(c)(3) corporation.");
+
+		Thread.sleep(2000);
+		System.out.println(copyrightmessage);
+	}
+
+	@Test(priority = 2)
 	public void loginlogout() throws InterruptedException {
 
 		// validation 1 (Blank user-name and password)
@@ -182,7 +182,7 @@ String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		Thread.sleep(2000);
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 3)
 
 	public void verifyremembermecheckbox() throws InterruptedException {
 
@@ -219,7 +219,7 @@ String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		Thread.sleep(2000);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 4)
 
 	public void testforgetpassword() throws InterruptedException {
 

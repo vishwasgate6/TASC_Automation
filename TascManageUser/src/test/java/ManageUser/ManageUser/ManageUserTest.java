@@ -34,7 +34,7 @@ public class ManageUserTest {
 	public void OpenBrowseAndLogin() throws InterruptedException {
 
 		driver.get("https://stage1.tascportal.org");
-		// driver.get("https://tascportal.org");
+		//driver.get("https://tascportal.org");
 		driver.manage().window().maximize();
 		Thread.sleep(4000);
 
@@ -49,7 +49,7 @@ public class ManageUserTest {
 		WebElement clickLogin = wait.until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='btn btn-large btn-fullwidth m-t40']")));
 		clickLogin.click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 	}
 
 	@Test(priority = 0)
@@ -74,12 +74,12 @@ public class ManageUserTest {
 
 		WebElement Email = wait.until(ExpectedConditions.elementToBeClickable(By.id("Email")));
 		Email.sendKeys("hello2@gate6.com");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		WebElement selectagency = driver.findElement((By.xpath(
-				"//*[@id='frmUserManagement']/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/span/span/span[2]/span")));
-		selectagency.click();
-		Thread.sleep(2000);
+				"//*[@id=\"frmUserManagement\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/span/span/span[1]")));
+		selectagency.click(); 
+		Thread.sleep(2000);  
 
 		// select the agency from drop-down
 
@@ -87,32 +87,26 @@ public class ManageUserTest {
 		List<WebElement> options = driver.findElements(By.xpath("//ul[@id='Agency_listbox']/li"));
 		// Loop through the options and select the one that matches
 		for (WebElement option : options) {
-
-			if (option.getText().equals(searchText)) {
-
+			if (option.getText().toLowerCase().equals(searchText.toLowerCase())) {
 				option.click();
 			}
 		}
 		Thread.sleep(4000);
 
-		// click the desired option
-
 		WebElement Role = driver.findElement((By.xpath(
-				"//*[@id='frmUserManagement']/div[1]/div[2]/div[2]/div/div[3]/div/div/span[1]/span/span[2]/span")));
+				"//*[@id=\"frmUserManagement\"]/div[1]/div[2]/div[2]/div/div[3]/div/div/span[1]/span/span[1]"))); 
 		Role.click();
 
-		Thread.sleep(3000);
-
 		// select the Roles from drop-down
-		String searchrole = "CASE MANAGER";
-		List<WebElement> roles = driver.findElements(By.xpath("//ul[@id='Role_listbox']/li"));
+		String searchroletext = "Case Manager";
+		List<WebElement> roles = driver.findElements(By.xpath("//ul[@id='Role_listbox']/li"));   
 		for (WebElement searchroles : roles) {
-			if (searchroles.getText().equals(searchrole)) {
+			if (searchroles.getText().toLowerCase().equals(searchroletext.toLowerCase())) {
 				searchroles.click();
-				// click the desired option }
+				}
 
-			}
-
+		}
+			Thread.sleep(2000);
 			WebElement Phonenumber = wait.until(ExpectedConditions.elementToBeClickable(By.id("CellNo")));
 			Phonenumber.sendKeys("9713108197");
 			Thread.sleep(2000);
@@ -126,7 +120,7 @@ public class ManageUserTest {
 			AssertJUnit.assertEquals(Alertmessage, "User created successfully!");
 			System.out.println(Alertmessage);
 		}
-	}
+	
 
 	@Test(priority = 1)
 	public void Edituser() throws InterruptedException {
@@ -139,7 +133,7 @@ public class ManageUserTest {
 
 		WebElement edituserclick = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".grid-link")));
 		edituserclick.click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		String actualTitle = driver.findElement(By.id("UserViewTitle")).getText();
 		String expectedTitle = "EDIT USER > GATE61, HELLO1 TEST1";
@@ -183,6 +177,7 @@ public class ManageUserTest {
 		WebElement emailedit = wait.until(ExpectedConditions.elementToBeClickable(By.id("Email")));
 		emailedit.clear();
 		emailedit.sendKeys("vishwas9011@gmail.com");
+		Thread.sleep(2000);
 
 		WebElement clickSave = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSave")));
 		clickSave.click();
@@ -208,11 +203,10 @@ public class ManageUserTest {
 		// Loop through the options and select the one that matches
 		for (WebElement option : options) {
 
-			if (option.getText().equals(searchText)) {
+			if (option.getText().toLowerCase().equals(searchText.toLowerCase())) {
+				option.click(); // click the desired option
+				Thread.sleep(3000);
 			}
-			option.click(); // click the desired option
-			Thread.sleep(3000);
-
 		}
 
 		WebElement Role = driver.findElement((By.xpath(
@@ -222,17 +216,17 @@ public class ManageUserTest {
 
 		// select the Roles from drop-down
 
-		String searchrole = "CASE MANAGER";
+		String searchrole = "Case Manager";
 		List<WebElement> roles = driver.findElements(By.xpath("//ul[@id='RoleFilter_listbox']/li"));
 		for (WebElement searchroles : roles) {
-			if (searchroles.getText().equals(searchrole)) {
+			if (searchroles.getText().toLowerCase().equals(searchrole.toLowerCase())) {
+				searchroles.click(); // click the desired option
+				Thread.sleep(3000);
 			}
-			searchroles.click(); // click the desired option
-			Thread.sleep(3000);
 		}
 
 		WebElement filtertextbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
-
+		Thread.sleep(2000);
 		filtertextbox.sendKeys("hello2@gate6.com");
 		filtertextbox.sendKeys(Keys.ENTER);
 		((JavascriptExecutor) driver).executeScript("scroll(0,400)");
@@ -266,6 +260,11 @@ public class ManageUserTest {
 		String Success = "User deleted successfully!";
 		AssertJUnit.assertEquals(Success, "User deleted successfully!");
 		System.out.println(Success);
+		Thread.sleep(2000);
+		
+		WebElement filtertextboxclear = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
+		filtertextboxclear.clear();
+		Thread.sleep(2000);
 
 	}
 
@@ -280,10 +279,10 @@ public class ManageUserTest {
 		List<WebElement> options = driver.findElements(By.xpath("//ul[@id='AgencyFilter_listbox']/li"));
 
 		for (WebElement option : options) {
-			if (option.getText().equals(searchText)) {
+			if (option.getText().toLowerCase().equals(searchText.toLowerCase())) {
+				option.click(); // click the desired option
+				Thread.sleep(3000);
 			}
-			option.click(); // click the desired option
-			Thread.sleep(3000);
 		}
 
 		WebElement Role = driver.findElement((By.xpath(
@@ -292,13 +291,13 @@ public class ManageUserTest {
 		Thread.sleep(2000);
 
 		// select the Roles from drop-down
-		String searchrole = "CASE MANAGER";
+		String searchrole = "Case Manager";
 		List<WebElement> roles = driver.findElements(By.xpath("//ul[@id='RoleFilter_listbox']/li"));
 		for (WebElement searchroles : roles) {
-			if (searchroles.getText().equals(searchrole)) {
+			if (searchroles.getText().toLowerCase().equals(searchrole.toLowerCase())) {
 				searchroles.click(); // click the desired option
-
 				Thread.sleep(3000);
+				}
 			}
 
 			WebElement status = driver.findElement((By.xpath(
@@ -317,11 +316,11 @@ public class ManageUserTest {
 					status1.click(); // click the desired option
 					Thread.sleep(2000);
 				}
-
 			}
 
 			WebElement filtertextbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
 			filtertextbox.clear();
+			Thread.sleep(2000);
 			filtertextbox.sendKeys("vishwas9011@gmail.com");
 			filtertextbox.sendKeys(Keys.ENTER);
 			((JavascriptExecutor) driver).executeScript("scroll(0,400)");
@@ -338,14 +337,22 @@ public class ManageUserTest {
 			System.out.println(driver.findElement(By.xpath("//*[@id='tasc-popup-content']")).getText());
 			driver.findElement(By.xpath(".//*[@id='btnOk']")).click();
 			Thread.sleep(2000);
+			
+			WebElement filtertextboxclear = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
+			filtertextboxclear.clear();
+			filtertextbox.sendKeys(Keys.ENTER);
+			Thread.sleep(4000);
 
 		}
-	}
 
 	@Test(priority = 5)
 	public void actiondropdown() throws InterruptedException {
-
-		//Case 1 : Deactivate user from actions column
+		
+		WebElement cancelbtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnCancel")));
+		cancelbtn.click();
+		Thread.sleep(3000);
+		
+		// Case 1 : Deactivate user from actions column
 		WebElement selectagency = driver.findElement((By.className("k-select")));
 		selectagency.click();
 		Thread.sleep(2000);
@@ -355,7 +362,7 @@ public class ManageUserTest {
 
 		// Loop through the options and select the one that matches
 		for (WebElement option : options) {
-			if (option.getText().equals(searchText)) {
+			if (option.getText().toLowerCase().equals(searchText.toLowerCase())) {
 				option.click();
 				// click the desired option
 				Thread.sleep(3000);
@@ -373,16 +380,18 @@ public class ManageUserTest {
 		List<WebElement> roles = driver.findElements(By.xpath("//ul[@id='RoleFilter_listbox']/li"));
 		// Loop through the options and select the one that matches
 		for (WebElement searchroles : roles) {
-			if (searchroles.getText().equals(searchrole)) {
+			if (searchroles.getText().toLowerCase().equals(searchrole.toLowerCase())) {
 				searchroles.click();
 				// click the desired option
 				Thread.sleep(3000);
 			}
 		}
 
-		WebElement SelectCheckBox = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//*[@id=\"mCSB_3_container\"]/div[1]/table/tbody/tr[1]/td[1]/label")));
-		SelectCheckBox.click();
+		WebElement FindText2 = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'ADMIN, TASC')]")));
+		
+		WebElement SelectCheckBox3 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//td/label")));
+		SelectCheckBox3.click();
 		Thread.sleep(2000);
 
 		WebElement ClickActionBUtton = wait.until(ExpectedConditions.elementToBeClickable(
@@ -394,34 +403,44 @@ public class ManageUserTest {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@id=\"Action_listbox\"]/li[3]")));
 		DeactivateSelected.click();
 		Thread.sleep(1000);
-		
+
 		WebElement Confirm = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnConfirm")));
 		Confirm.click();
 		Thread.sleep(2000);
-		
+
 		WebElement GetText = wait.until(ExpectedConditions.elementToBeClickable(By.className("Success")));
 		String alertmessage = GetText.getText();
-		
+
 		System.out.println(alertmessage);
-		Thread.sleep(6000);		
-		
-		/* Case 2 : Activated user from actions column */
-		
+		Thread.sleep(6000);
+
+		/* Case 2 : Activated user from actions column*/
+
 		WebElement filtertextbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("FilterKeywords")));
 		filtertextbox.sendKeys("tascadmin@gate6.com");
 		filtertextbox.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);
 		
-		WebElement FindText = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'ADMIN, TASC')]")));
-		
-		WebElement SelectCheckBox2 = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//td/label")));
-		SelectCheckBox2.click();
+		WebElement status = driver.findElement((By.xpath(
+				"//*[@id='body']/section/div/div[1]/div[1]/div/div/div/div[2]/div/div[3]/div/span/span/span[2]/span")));
+		status.click(); 
+
 		Thread.sleep(2000);
 		
+		WebElement status1 = driver.findElement((By.xpath(
+				"//*[@id=\"StatusFilter_listbox\"]/li[3]")));
+		status1.click();
+		Thread.sleep(3000);
+
+		WebElement FindText = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'ADMIN, TASC')]")));
+
+		WebElement SelectCheckBox2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//td/label")));
+		SelectCheckBox2.click();
+		Thread.sleep(2000);
+
 		WebElement ClickActionBUtton2 = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//*[@id=\"body\"]/section/div/div[1]/div[3]/div/div/div/span/span/span[2]/span"))); 
+				By.xpath("//*[@id=\"body\"]/section/div/div[1]/div[3]/div/div/div/span/span/span[2]/span")));
 		ClickActionBUtton2.click();
 		Thread.sleep(2000);
 
@@ -429,25 +448,25 @@ public class ManageUserTest {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@id=\"Action_listbox\"]/li[1]")));
 		activateSelected.click();
 		Thread.sleep(1000);
-		
+
 		WebElement Confirm2 = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnConfirm")));
 		Confirm2.click();
 		Thread.sleep(2000);
-		
+
 		WebElement GetText2 = wait.until(ExpectedConditions.elementToBeClickable(By.className("Success")));
 		String alertmessage2 = GetText2.getText();
-		
+
 		System.out.println(alertmessage2);
-		Thread.sleep(3000);	
-		
-		
-		/* Case 3 : Deleted user from actions column */
+		Thread.sleep(3000);
+
 	}
 
 	@AfterClass
 	public void closeBrowser() throws InterruptedException {
 
 		driver.close();
+		driver.quit();
+		
 	}
 
 }

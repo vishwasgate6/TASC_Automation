@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="TSD-124" name="ManageRelaseNotes.Manage_Release_NotesTest" tests="5" failures="0" timestamp="5 Dec 2017 06:36:13 GMT" time="141.135" errors="0">
+  <testcase name="ManageReleaseNotes" time="7.933" classname="ManageRelaseNotes.Manage_Release_NotesTest"/>
+  <testcase name="CreateReleaseNotes" time="31.444" classname="ManageRelaseNotes.Manage_Release_NotesTest"/>
+  <testcase name="EditReleaseNotesbydescription" time="22.436" classname="ManageRelaseNotes.Manage_Release_NotesTest"/>
+  <testcase name="EditReleaseNotesbydate" time="24.821" classname="ManageRelaseNotes.Manage_Release_NotesTest"/>
+  <testcase name="DeleteReleaseNotes" time="21.44" classname="ManageRelaseNotes.Manage_Release_NotesTest"/>
+</testsuite>

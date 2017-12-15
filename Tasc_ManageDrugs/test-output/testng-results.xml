@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="31987" started-at="2017-12-05T12:42:26Z" finished-at="2017-12-05T12:42:57Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="31987" started-at="2017-12-05T12:42:26Z" finished-at="2017-12-05T12:42:57Z">
+      <class name="Tasc_ManageDrugs.Tasc_ManageDrugs.ManageDrugsTest">
+        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="30049" started-at="2017-12-05T12:42:26Z" finished-at="2017-12-05T12:42:56Z">
+        </test-method>
+        <test-method status="PASS" signature="ManageDrugs()" name="ManageDrugs" duration-ms="33" started-at="2017-12-05T12:42:56Z" finished-at="2017-12-05T12:42:56Z">
+        </test-method>
+        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="1853" started-at="2017-12-05T12:42:56Z" finished-at="2017-12-05T12:42:57Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

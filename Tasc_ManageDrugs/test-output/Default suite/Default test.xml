@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="TSD-124" name="Tasc_ManageDrugs.Tasc_ManageDrugs.ManageDrugsTest" tests="1" failures="0" timestamp="5 Dec 2017 07:12:58 GMT" time="31.987" errors="0">
+  <testcase name="ManageDrugs" time="0.033" classname="Tasc_ManageDrugs.Tasc_ManageDrugs.ManageDrugsTest"/>
+</testsuite>

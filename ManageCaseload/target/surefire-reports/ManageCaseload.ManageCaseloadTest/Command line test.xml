@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="TSD-124" name="ManageCaseload.ManageCaseloadTest" tests="1" failures="0" timestamp="16 Jan 2018 09:46:08 GMT" time="33.409" errors="0">
+  <testcase name="ManageCaseload" time="0.001" classname="ManageCaseload.ManageCaseloadTest"/>
+</testsuite>

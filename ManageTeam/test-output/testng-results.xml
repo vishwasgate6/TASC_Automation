@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="135057" started-at="2018-04-04T17:29:48Z" finished-at="2018-04-04T17:32:03Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="135057" started-at="2018-04-04T17:29:48Z" finished-at="2018-04-04T17:32:03Z">
+      <class name="ManageTeam.ManageTeamTest">
+        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="21791" started-at="2018-04-04T17:29:48Z" finished-at="2018-04-04T17:30:10Z">
+        </test-method>
+        <test-method status="PASS" signature="OpenManageTeamSection()" name="OpenManageTeamSection" duration-ms="6145" started-at="2018-04-04T17:30:10Z" finished-at="2018-04-04T17:30:16Z">
+        </test-method>
+        <test-method status="PASS" signature="selecttheagency()" name="selecttheagency" duration-ms="7610" started-at="2018-04-04T17:30:16Z" finished-at="2018-04-04T17:30:24Z">
+        </test-method>
+        <test-method status="PASS" signature="clickonaddnewteam()" name="clickonaddnewteam" duration-ms="2138" started-at="2018-04-04T17:30:24Z" finished-at="2018-04-04T17:30:26Z">
+        </test-method>
+        <test-method status="PASS" signature="cancelbutton()" name="cancelbutton" duration-ms="2116" started-at="2018-04-04T17:30:26Z" finished-at="2018-04-04T17:30:28Z">
+        </test-method>
+        <test-method status="PASS" signature="addnewteam()" name="addnewteam" duration-ms="14384" started-at="2018-04-04T17:30:28Z" finished-at="2018-04-04T17:30:42Z">
+        </test-method>
+        <test-method status="PASS" signature="duplicatenewteam()" name="duplicatenewteam" duration-ms="17060" started-at="2018-04-04T17:30:42Z" finished-at="2018-04-04T17:30:59Z">
+        </test-method>
+        <test-method status="PASS" signature="verifytooltip()" name="verifytooltip" duration-ms="6085" started-at="2018-04-04T17:30:59Z" finished-at="2018-04-04T17:31:05Z">
+        </test-method>
+        <test-method status="PASS" signature="ChanegTeamName()" name="ChanegTeamName" duration-ms="18875" started-at="2018-04-04T17:31:05Z" finished-at="2018-04-04T17:31:24Z">
+        </test-method>
+        <test-method status="PASS" signature="ChanegTeamwithoutuser()" name="ChanegTeamwithoutuser" duration-ms="9481" started-at="2018-04-04T17:31:24Z" finished-at="2018-04-04T17:31:34Z">
+        </test-method>
+        <test-method status="PASS" signature="ChanegTeamwithuser()" name="ChanegTeamwithuser" duration-ms="14999" started-at="2018-04-04T17:31:34Z" finished-at="2018-04-04T17:31:49Z">
+        </test-method>
+        <test-method status="PASS" signature="DeleteTeamwithuser()" name="DeleteTeamwithuser" duration-ms="5239" started-at="2018-04-04T17:31:49Z" finished-at="2018-04-04T17:31:54Z">
+        </test-method>
+        <test-method status="PASS" signature="DeleteTeamwithoutuser()" name="DeleteTeamwithoutuser" duration-ms="6280" started-at="2018-04-04T17:31:54Z" finished-at="2018-04-04T17:32:00Z">
+        </test-method>
+        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="2802" started-at="2018-04-04T17:32:00Z" finished-at="2018-04-04T17:32:03Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

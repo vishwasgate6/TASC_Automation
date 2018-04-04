@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="TSD-124" name="ManageTeam.ManageTeamTest" tests="12" failures="0" timestamp="4 Apr 2018 12:02:03 GMT" time="135.057" errors="0">
+  <testcase name="OpenManageTeamSection" time="6.145" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="selecttheagency" time="7.61" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="clickonaddnewteam" time="2.138" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="cancelbutton" time="2.116" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="addnewteam" time="14.384" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="duplicatenewteam" time="17.06" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="verifytooltip" time="6.085" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="ChanegTeamName" time="18.875" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="ChanegTeamwithoutuser" time="9.481" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="ChanegTeamwithuser" time="14.999" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="DeleteTeamwithuser" time="5.239" classname="ManageTeam.ManageTeamTest"/>
+  <testcase name="DeleteTeamwithoutuser" time="6.28" classname="ManageTeam.ManageTeamTest"/>
+</testsuite>

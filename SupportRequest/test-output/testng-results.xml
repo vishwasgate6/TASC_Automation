@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="95663" started-at="2018-05-10T14:34:45Z" finished-at="2018-05-10T14:36:21Z">
+  <suite name="Default suite" duration-ms="64214" started-at="2018-05-17T18:05:47Z" finished-at="2018-05-17T18:06:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="95663" started-at="2018-05-10T14:34:45Z" finished-at="2018-05-10T14:36:21Z">
+    <test name="Default test" duration-ms="64214" started-at="2018-05-17T18:05:47Z" finished-at="2018-05-17T18:06:51Z">
       <class name="SupportRequest.SupportRequestTest">
-        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="37457" started-at="2018-05-10T14:34:45Z" finished-at="2018-05-10T14:35:22Z">
+        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="31400" started-at="2018-05-17T18:05:47Z" finished-at="2018-05-17T18:06:18Z">
         </test-method>
-        <test-method status="PASS" signature="OpenSupportRequestSection()" name="OpenSupportRequestSection" duration-ms="8058" started-at="2018-05-10T14:35:22Z" finished-at="2018-05-10T14:35:30Z">
+        <test-method status="PASS" signature="OpenSupportRequestSection()" name="OpenSupportRequestSection" duration-ms="8455" started-at="2018-05-17T18:06:18Z" finished-at="2018-05-17T18:06:27Z">
         </test-method>
-        <test-method status="PASS" signature="SupportRequestValidation()" name="SupportRequestValidation" duration-ms="5968" started-at="2018-05-10T14:35:30Z" finished-at="2018-05-10T14:35:36Z">
+        <test-method status="PASS" signature="SupportRequestValidation()" name="SupportRequestValidation" duration-ms="5946" started-at="2018-05-17T18:06:27Z" finished-at="2018-05-17T18:06:33Z">
         </test-method>
-        <test-method status="PASS" signature="SupportRequestFunctionality()" name="SupportRequestFunctionality" duration-ms="18021" started-at="2018-05-10T14:35:36Z" finished-at="2018-05-10T14:35:54Z">
+        <test-method status="PASS" signature="SupportRequestFunctionality()" name="SupportRequestFunctionality" duration-ms="15415" started-at="2018-05-17T18:06:33Z" finished-at="2018-05-17T18:06:48Z">
         </test-method>
-        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="26103" started-at="2018-05-10T14:35:54Z" finished-at="2018-05-10T14:36:21Z">
+        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="2908" started-at="2018-05-17T18:06:48Z" finished-at="2018-05-17T18:06:51Z">
         </test-method>
       </class>
     </test>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="247093" started-at="2018-05-17T16:34:54Z" finished-at="2018-05-17T16:39:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="247093" started-at="2018-05-17T16:34:54Z" finished-at="2018-05-17T16:39:01Z">
+      <class name="ManageEncouragementDays.ManageEncouragementDaysTest">
+        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="38389" started-at="2018-05-17T16:34:54Z" finished-at="2018-05-17T16:35:32Z">
+        </test-method>
+        <test-method status="PASS" signature="OpenManageEncouragementDaysSection()" name="OpenManageEncouragementDaysSection" duration-ms="10320" started-at="2018-05-17T16:35:32Z" finished-at="2018-05-17T16:35:42Z">
+        </test-method>
+        <test-method status="PASS" signature="OpenandCloseEncouragementDayspopup()" name="OpenandCloseEncouragementDayspopup" duration-ms="7947" started-at="2018-05-17T16:35:42Z" finished-at="2018-05-17T16:35:50Z">
+        </test-method>
+        <test-method status="PASS" signature="AddEncouragementDays()" name="AddEncouragementDays" duration-ms="20379" started-at="2018-05-17T16:35:50Z" finished-at="2018-05-17T16:36:11Z">
+        </test-method>
+        <test-method status="PASS" signature="AddMultipleEncouragementDays()" name="AddMultipleEncouragementDays" duration-ms="26513" started-at="2018-05-17T16:36:11Z" finished-at="2018-05-17T16:36:37Z">
+        </test-method>
+        <test-method status="PASS" signature="EditEncouragementDays()" name="EditEncouragementDays" duration-ms="33780" started-at="2018-05-17T16:36:37Z" finished-at="2018-05-17T16:37:11Z">
+        </test-method>
+        <test-method status="PASS" signature="RemoveEncouragementdaysFromEditEncouragementdayspopup()" name="RemoveEncouragementdaysFromEditEncouragementdayspopup" duration-ms="26046" started-at="2018-05-17T16:37:11Z" finished-at="2018-05-17T16:37:37Z">
+        </test-method>
+        <test-method status="PASS" signature="EncouragementDaysFromAgency()" name="EncouragementDaysFromAgency" duration-ms="43897" started-at="2018-05-17T16:37:37Z" finished-at="2018-05-17T16:38:21Z">
+        </test-method>
+        <test-method status="PASS" signature="RemovetheEncouragementDayfromGrid()" name="RemovetheEncouragementDayfromGrid" duration-ms="36843" started-at="2018-05-17T16:38:21Z" finished-at="2018-05-17T16:38:58Z">
+        </test-method>
+        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="2920" started-at="2018-05-17T16:38:58Z" finished-at="2018-05-17T16:39:01Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

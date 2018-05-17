@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="TSD-124" name="SupportRequest.SupportRequestTest" tests="3" failures="0" timestamp="10 May 2018 09:06:21 GMT" time="95.663" errors="0">
+  <testcase name="OpenSupportRequestSection" time="8.058" classname="SupportRequest.SupportRequestTest"/>
+  <testcase name="SupportRequestValidation" time="5.968" classname="SupportRequest.SupportRequestTest"/>
+  <testcase name="SupportRequestFunctionality" time="18.021" classname="SupportRequest.SupportRequestTest"/>
+</testsuite>

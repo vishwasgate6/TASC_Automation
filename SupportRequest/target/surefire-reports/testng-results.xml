@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SupportRequest.SupportRequestTest" duration-ms="60516" started-at="2018-05-14T10:42:12Z" finished-at="2018-05-14T10:43:13Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="60516" started-at="2018-05-14T10:42:12Z" finished-at="2018-05-14T10:43:13Z">
+      <class name="SupportRequest.SupportRequestTest">
+        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="30093" started-at="2018-05-14T10:42:12Z" finished-at="2018-05-14T10:42:42Z">
+        </test-method>
+        <test-method status="PASS" signature="OpenSupportRequestSection()" name="OpenSupportRequestSection" duration-ms="7921" started-at="2018-05-14T10:42:42Z" finished-at="2018-05-14T10:42:50Z">
+        </test-method>
+        <test-method status="PASS" signature="SupportRequestValidation()" name="SupportRequestValidation" duration-ms="5564" started-at="2018-05-14T10:42:50Z" finished-at="2018-05-14T10:42:56Z">
+        </test-method>
+        <test-method status="PASS" signature="SupportRequestFunctionality()" name="SupportRequestFunctionality" duration-ms="15972" started-at="2018-05-14T10:42:56Z" finished-at="2018-05-14T10:43:12Z">
+        </test-method>
+        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="952" started-at="2018-05-14T10:43:12Z" finished-at="2018-05-14T10:43:13Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

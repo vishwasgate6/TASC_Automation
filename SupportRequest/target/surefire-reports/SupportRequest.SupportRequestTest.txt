@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: SupportRequest.SupportRequestTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 88.757 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 120.129 sec

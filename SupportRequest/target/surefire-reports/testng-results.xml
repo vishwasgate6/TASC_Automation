@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="SupportRequest.SupportRequestTest" duration-ms="60516" started-at="2018-05-14T10:42:12Z" finished-at="2018-05-14T10:43:13Z">
+  <suite name="SupportRequest.SupportRequestTest" duration-ms="73030" started-at="2018-05-17T17:52:50Z" finished-at="2018-05-17T17:54:03Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="60516" started-at="2018-05-14T10:42:12Z" finished-at="2018-05-14T10:43:13Z">
+    <test name="Command line test" duration-ms="73030" started-at="2018-05-17T17:52:50Z" finished-at="2018-05-17T17:54:03Z">
       <class name="SupportRequest.SupportRequestTest">
-        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="30093" started-at="2018-05-14T10:42:12Z" finished-at="2018-05-14T10:42:42Z">
+        <test-method status="PASS" signature="OpenBrowseAndLogin()" name="OpenBrowseAndLogin" is-config="true" duration-ms="37546" started-at="2018-05-17T17:52:50Z" finished-at="2018-05-17T17:53:28Z">
         </test-method>
-        <test-method status="PASS" signature="OpenSupportRequestSection()" name="OpenSupportRequestSection" duration-ms="7921" started-at="2018-05-14T10:42:42Z" finished-at="2018-05-14T10:42:50Z">
+        <test-method status="PASS" signature="OpenSupportRequestSection()" name="OpenSupportRequestSection" duration-ms="11225" started-at="2018-05-17T17:53:28Z" finished-at="2018-05-17T17:53:39Z">
         </test-method>
-        <test-method status="PASS" signature="SupportRequestValidation()" name="SupportRequestValidation" duration-ms="5564" started-at="2018-05-14T10:42:50Z" finished-at="2018-05-14T10:42:56Z">
+        <test-method status="PASS" signature="SupportRequestValidation()" name="SupportRequestValidation" duration-ms="5951" started-at="2018-05-17T17:53:39Z" finished-at="2018-05-17T17:53:45Z">
         </test-method>
-        <test-method status="PASS" signature="SupportRequestFunctionality()" name="SupportRequestFunctionality" duration-ms="15972" started-at="2018-05-14T10:42:56Z" finished-at="2018-05-14T10:43:12Z">
+        <test-method status="PASS" signature="SupportRequestFunctionality()" name="SupportRequestFunctionality" duration-ms="15895" started-at="2018-05-17T17:53:45Z" finished-at="2018-05-17T17:54:01Z">
         </test-method>
-        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="952" started-at="2018-05-14T10:43:12Z" finished-at="2018-05-14T10:43:13Z">
+        <test-method status="PASS" signature="closeBrowser()" name="closeBrowser" is-config="true" duration-ms="2384" started-at="2018-05-17T17:54:01Z" finished-at="2018-05-17T17:54:03Z">
         </test-method>
       </class>
     </test>

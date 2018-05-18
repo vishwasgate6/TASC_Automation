@@ -115,8 +115,6 @@ public class SupportRequestTest {
 		System.out.println(Successmessage);
 		Thread.sleep(2000);
 		
-		
-		
 	}
 	
 		

@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -14,10 +13,6 @@ import org.testng.annotations.Test;
 
 public class LoginLogoutTest {
 
-//	String s = System.setProperty("webdriver.gecko.driver", "E:\\Seleniume\\geckodriver.exe");
-//	WebDriver driver = new FirefoxDriver();
-	//-------------------FireFox-----------------
-	
 	String s = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
 	public WebDriverWait wait = new WebDriverWait(driver, 60);
@@ -45,7 +40,7 @@ public class LoginLogoutTest {
 
 		WebElement copyright = wait.until(ExpectedConditions.elementToBeClickable(By.className("copyright")));
 		String copyrightmessage = copyright.getText();
-		Assert.assertEquals(copyrightmessage, "Copyright 2017. TASC, A private, non-profit, 501 © (3) corporation.");
+		Assert.assertEquals(copyrightmessage, "Copyright 2017. TASC, A private, non-profit, 501 Â© (3) corporation.");
 		// Assert.assertEquals(copyrightmessage,"Copyright 2017. TASC, A
 		// private, non-profit, 501(c)(3) corporation.");
 

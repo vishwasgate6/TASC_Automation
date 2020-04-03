@@ -32,18 +32,13 @@ public class LoginLogoutTest {
 		WebElement builddate = wait.until(ExpectedConditions.elementToBeClickable(By.className("build-number")));
 		String st = builddate.getText();
 
-		Assert.assertEquals(st, "3.13.07172017 - Chrome 61 (61.0.3163.100) 1920 x 1080");
-		// Assert.assertEquals(st, "3.11.05102017 - Firefox 54 (54.0) 1920 x
-		// 1080");
+		Assert.assertEquals(st, "3.26.01032020 - Chrome 80 (80.0.3987.162) 1366 x 768");
 		Thread.sleep(2000);
 		System.out.println(st);
 
 		WebElement copyright = wait.until(ExpectedConditions.elementToBeClickable(By.className("copyright")));
 		String copyrightmessage = copyright.getText();
-		Assert.assertEquals(copyrightmessage, "Copyright 2017. TASC, A private, non-profit, 501 Â© (3) corporation.");
-		// Assert.assertEquals(copyrightmessage,"Copyright 2017. TASC, A
-		// private, non-profit, 501(c)(3) corporation.");
-
+		Assert.assertEquals(copyrightmessage, "Copyright © 2020, TASC Inc, A private, non-profit, 501 (C)(3) corporation.");
 		Thread.sleep(2000);
 		System.out.println(copyrightmessage);
 	}
@@ -193,8 +188,6 @@ public class LoginLogoutTest {
 				.until(ExpectedConditions.elementToBeClickable(By.className("label_check")));
 		chkremembermecheckbox.click();
 		Thread.sleep(3000);
-
-		System.out.println("test");
 
 		WebElement clickLogin = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='frmDefault']/div[5]/input")));
